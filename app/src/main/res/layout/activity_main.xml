@@ -15,7 +15,8 @@
         android:visibility="visible"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText"
         app:layout_constraintStart_toEndOf="@+id/editText"
-        tools:text="Button" />
+        tools:text="Button"
+        android:onClick="change"/>
 
     <EditText
         android:id="@+id/editText"
