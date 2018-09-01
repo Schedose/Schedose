@@ -13,22 +13,20 @@
         android:layout_marginStart="16dp"
         android:text="@string/button"
         android:visibility="visible"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TextBox"
+        app:layout_constraintStart_toEndOf="@+id/TextBox"
         tools:text="Button"
         android:onClick="change"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/TextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Put words here"
-        android:inputType="text|textPersonName"
-        android:text="@string/textbox"
+        android:hint="Insert Name"
+        android:inputType="text|textPersonName|number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="TEXT" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
