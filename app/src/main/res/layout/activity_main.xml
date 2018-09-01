@@ -10,12 +10,14 @@
         android:id="@+id/pressthistodie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
         android:onClick="change"
         android:text="Click me!"
+        android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintBaseline_toBaselineOf="@+id/TextBoxName"
-        app:layout_constraintStart_toEndOf="@+id/TextBoxName" />
+        app:layout_constraintStart_toEndOf="@+id/TextBoxAdj"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/TextBoxName"
