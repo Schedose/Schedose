@@ -21,10 +21,13 @@ public class MainActivity extends AppCompatActivity {
         pressbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText text = (EditText) findViewById(R.id.TextBox);
-                TextView result=(TextView) findViewById(R.id.textView2);
-                String number=text.getText().toString();
-                result.setText(number+"");
+                EditText name = (EditText) findViewById(R.id.TextBoxName);
+                EditText adjective=(EditText) findViewById(R.id.TextBoxAdj);
+                String Name=name.getText().toString();
+                String adj=adjective.getText().toString();
+                TextView result = (TextView) findViewById(R.id.textView2);
+
+                result.setText(Name+" is "+adj);
             }
         });
     }
