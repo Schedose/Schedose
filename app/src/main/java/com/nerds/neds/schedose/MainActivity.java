@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText text = (EditText) findViewById(R.id.TextBox);
                 TextView result=(TextView) findViewById(R.id.textView2);
-                String number=pressbutton.getText().toString();
+                String number=text.getText().toString();
                 result.setText(number+"");
             }
         });
