@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button pressbutton = (Button) findViewById(R.id.pressthistodie);
 
-        //Ned is a chumbis
         pressbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
