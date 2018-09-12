@@ -12,36 +12,32 @@ import android.widget.Toast;
 public class FirstTimeScreen extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_time_screen);
 
-
         int launchCounter = getSharedPreferences("launchTimes", Context.MODE_PRIVATE).getInt("launchCount",0);
-        if (launchCounter == 0)
-        {
+        if (launchCounter == 0) {
             Toast.makeText(FirstTimeScreen.this, "First Run", Toast.LENGTH_LONG).show();
             Intent firstLaunchIntent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(firstLaunchIntent);
-            getSharedPreferences("launchTimes", Context.MODE_PRIVATE).edit().putInt("launchCount", 1);
+            getSharedPreferences("launchTimes", Context.MODE_PRIVATE).edit().putInt("launchCount", 1).apply();
         }
-        else
-        {
-            getSharedPreferences("launchTimes", Context.MODE_PRIVATE).edit().putInt("launchCount", launchCounter+1);
+        else {
+            getSharedPreferences("launchTimes", Context.MODE_PRIVATE).edit().putInt("launchCount", launchCounter+1).apply();
 
         }
 
 
 
-        //Button firstlaunchnext = (Button) findViewById(R.id.firstLaunchNext);
-        //firstlaunchnext.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View v) {
-        //        Intent firstLaunchIntent = new Intent(getApplicationContext(), MainActivity.class);
-        //      startActivity(firstLaunchIntent);
-        //    }
-        //});
+        Button firstlaunchnext = (Button) findViewById(R.id.firstLaunchNext);
+        firstlaunchnext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent firstLaunchIntent = new Intent(getApplicationContext(), MainActivity.class);
+              startActivity(firstLaunchIntent);
+            }
+        });
     }
 
 
