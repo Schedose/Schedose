@@ -15,26 +15,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        Button pressbutton = (Button) findViewById(R.id.pressthistodie);
+        Button pressbutton = findViewById(R.id.pressthistodie);
 
         pressbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText name = (EditText) findViewById(R.id.TextBoxName);
-                EditText adjective=(EditText) findViewById(R.id.TextBoxAdj);
-                String Name=name.getText().toString();
-                String adj=adjective.getText().toString();
-                TextView result = (TextView) findViewById(R.id.textView2);
-
-                result.setText(Name+" is "+adj);
+                EditText name = findViewById(R.id.TextBoxName);
+                EditText adjective = findViewById(R.id.TextBoxAdj);
+                String Name = name.getText().toString();
+                String adj = adjective.getText().toString();
+                TextView result = findViewById(R.id.textView2);
+                result.setText(Name + " is " + adj);
             }
         });
-        Button nextpage = (Button) findViewById(R.id.nxtpage);
+        Button nextpage = findViewById(R.id.nxtpage);
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent StartIntent=new Intent(getApplicationContext(),MainActivity2.class);
+                Intent StartIntent=new Intent(getApplicationContext(), MainActivity2.class);
                 StartIntent.putExtra("com.nerds.neds.schedose.WelcomeStatement","Hi! Welcome to the second page!");
                 startActivity(StartIntent);
             }

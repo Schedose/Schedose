@@ -11,10 +11,9 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         if(getIntent().hasExtra("com.nerds.neds.schedose.WelcomeStatement")){
-
-            TextView welcometext= (TextView) findViewById(R.id.WelcomeText);
-            String text=getIntent().getExtras().getString("com.nerds.neds.schedose.WelcomeStatement");
-            welcometext.setText(text+"");
+            TextView welcometext = findViewById(R.id.WelcomeText);
+            String text = getIntent().getExtras().getString("com.nerds.neds.schedose.WelcomeStatement");
+            welcometext.setText(text + "");
         }
     }
 }
