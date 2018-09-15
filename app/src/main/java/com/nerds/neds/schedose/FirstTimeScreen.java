@@ -31,6 +31,7 @@ public class FirstTimeScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent firstLaunchIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(firstLaunchIntent);
+                finish();
             }
         });
     }
