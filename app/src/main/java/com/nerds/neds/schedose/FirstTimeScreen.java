@@ -29,7 +29,7 @@ public class FirstTimeScreen extends AppCompatActivity {
         firstlaunchnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent firstLaunchIntent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent firstLaunchIntent = new Intent(getApplicationContext(), CreateActivity.class);
                 startActivity(firstLaunchIntent);
                 finish();
             }
