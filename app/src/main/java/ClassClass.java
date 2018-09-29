@@ -40,7 +40,7 @@ public class ClassClass {
     public void setPriority(int prior){
         priority = prior;
     }
-    
+
     public String toString(){
         return "Name: " + className + " Length: " + length + "";
     }
