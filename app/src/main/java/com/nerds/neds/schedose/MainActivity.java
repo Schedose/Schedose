@@ -11,12 +11,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    ArrayList<ClassClass> classes=new ArrayList<ClassClass>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ArrayList<ClassClass> x=new ArrayList<ClassClass>();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //classes.add(new ClassClass("name",0,0,0););
         String name = getSharedPreferences("username", Context.MODE_PRIVATE).getString("name", "user");
         TextView greeting=(TextView) findViewById(R.id.GreetingText) ;
         greeting.setText("Hello "+name);
