@@ -1,3 +1,5 @@
+package com.nerds.neds.schedose;
+
 public class ClassClass {
     private String className;
     private double length;
