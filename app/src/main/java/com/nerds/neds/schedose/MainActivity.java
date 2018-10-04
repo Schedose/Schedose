@@ -8,21 +8,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<ClassClass> classes=new ArrayList<ClassClass>();
 
+    ArrayList<ClassClass> classes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //classes.add(new ClassClass("name",0,0,0););
+        Gson gson = new Gson();
+        String json = getSharedPreferences("username", Context.MODE_PRIVATE).getString("class", "");
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        classes = gson.fromJson(json, type);
         String name = getSharedPreferences("username", Context.MODE_PRIVATE).getString("name", "user");
-        TextView greeting=(TextView) findViewById(R.id.GreetingText) ;
-        greeting.setText("Hello "+name);
+        TextView greeting = (TextView) findViewById(R.id.GreetingText) ;
+        greeting.setText("Hello " + name);
         Button nextpage = findViewById(R.id.nxtpage);
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override

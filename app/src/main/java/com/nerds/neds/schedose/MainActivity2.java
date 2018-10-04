@@ -24,7 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
         EditText ClassName = findViewById(R.id.ClassName);
         final String classname=ClassName.getText().toString();
         EditText ClassLength = findViewById(R.id.ClassLength);
-        final Double Classlength=Double.parseDouble(ClassLength.getText().toString());
+        final Double Classlength = Double.parseDouble(ClassLength.getText().toString());
         Button Done = findViewById(R.id.Done);
         Done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
                 Gson gson = new Gson();
                 String json = gson.toJson(classes);
                 getSharedPreferences("username", Context.MODE_PRIVATE).edit().putString("class", json).apply();
-                Intent StartIntent=new Intent(getApplicationContext(), MainActivity.class);
+                Intent StartIntent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(StartIntent);
             }
         });
