@@ -21,14 +21,14 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        EditText ClassName = findViewById(R.id.ClassName);
-        final String classname=ClassName.getText().toString();
-        EditText ClassLength = findViewById(R.id.ClassLength);
-        final Double Classlength = Double.parseDouble(ClassLength.getText().toString());
         Button Done = findViewById(R.id.Done);
         Done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText ClassName = findViewById(R.id.ClassName);
+                String classname=ClassName.getText().toString();
+                EditText ClassLength = findViewById(R.id.ClassLength);
+                Double Classlength = Double.parseDouble(ClassLength.getText().toString());
                 classes.add(new ClassClass(classname, Classlength, 0, 0));
                 Gson gson = new Gson();
                 String json = gson.toJson(classes);

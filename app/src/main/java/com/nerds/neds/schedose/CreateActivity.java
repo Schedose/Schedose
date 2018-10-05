@@ -14,7 +14,6 @@ public class CreateActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
-        getSharedPreferences("username", Context.MODE_PRIVATE).getString("name", "user");
         Button Homepage = findViewById(R.id.submit);
         Homepage.setOnClickListener(new View.OnClickListener() {
             @Override

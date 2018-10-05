@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent StartIntent=new Intent(getApplicationContext(), MainActivity2.class);
-                //StartIntent.putExtra("com.nerds.neds.schedose.WelcomeStatement","Hi! Welcome to the second page!");
                 startActivity(StartIntent);
             }
         });
